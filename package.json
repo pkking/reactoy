@@ -1,0 +1,25 @@
+{
+  "name": "reacttoy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/pkking/reactoy.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pkking/reactoy/issues"
+  },
+  "homepage": "https://github.com/pkking/reactoy#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "webpack-stream": "^3.2.0"
+  }
+}
