@@ -1,21 +1,26 @@
-//var React = require('react');
-//var ReactDOM = require('react-dom');
-//var require('pure-css');
-import {React } from 'react';
-import {ReactDOM} from 'react-dom';
-import {buttons, grids } from 'pure-css';
+import  React  from 'react';
+import  ReactDOM  from 'react-dom';
+// components
+import { Sidebar } from './src/components/sidebar.jsx';
+import { Content } from './src/components/content.jsx';
+import { Footer } from './src/components/footer.jsx';
 
-var Header = React.createClass({
+//sytles
+require('src/sytles/blog.scss');
+
+var Body = React.createClass({
   render: function() {
     return (
-	    <div className="header" styleName="pure-g" > 
-		    hello world.
-	    </div>
+      <div className="pure-g">
+        <Sidebar />
+        <Content />
+        <Footer />
+      </div>
     );
   }
 });
 
 ReactDOM.render(
-	<HelloWorld />,
-	document.getElementById('content')
+  <Body />,
+  document.getElementById('wrapper')
 );

@@ -31,8 +31,11 @@ module.exports = {
               loader: "sass-loader"
           },
           {
-              test: /\.css$/,
-	      loader: "style-loader!css-loader"
+              test: /\.scss$/,
+              include:[
+                  path.resolve(__dirname, "/src/styles")
+              ],
+              loaders: ["style", "css", "sass"]
           }
 
       ]  
