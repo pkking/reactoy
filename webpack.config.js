@@ -24,20 +24,13 @@ module.exports = {
               loader: "babel-loader"
           },
           {
-              test: /\.sass$/,
-              include:[
-                  path.resolve(__dirname, "/src/sass")
-              ],
-              loader: "sass-loader"
-          },
-          {
               test: /\.scss$/,
-              include:[
-                  path.resolve(__dirname, "/src/styles")
-              ],
               loaders: ["style", "css", "sass"]
           }
 
       ]  
     },
+    sassLoader: {
+      includePaths: [path.resolve(__dirname, "./src/sytles")]
+    }
 }

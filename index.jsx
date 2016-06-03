@@ -6,7 +6,7 @@ import { Content } from './src/components/content.jsx';
 import { Footer } from './src/components/footer.jsx';
 
 //sytles
-require('src/sytles/blog.scss');
+require('./src/sytles/blog.scss');
 
 var Body = React.createClass({
   render: function() {
