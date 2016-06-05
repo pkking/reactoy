@@ -7,12 +7,13 @@ import { Footer } from './src/components/footer.jsx';
 
 //sytles
 require('./src/sytles/blog.scss');
+var url = require('./src/static/profile.png');
 
 var Body = React.createClass({
   render: function() {
     return (
       <div className="pure-g">
-        <Sidebar />
+        <Sidebar url={this.props.url} />
         <Content />
         <Footer />
       </div>
@@ -21,6 +22,6 @@ var Body = React.createClass({
 });
 
 ReactDOM.render(
-  <Body />,
+  <Body url={url} />,
   document.getElementById('wrapper')
 );
