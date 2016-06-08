@@ -13,7 +13,7 @@ var Body = React.createClass({
   render: function() {
     return (
       <div className="pure-g">
-        <Sidebar url={this.props.url} />
+        <Sidebar url={this.props.url} socials={this.props.socials} />
         <Content />
         <Footer />
       </div>
@@ -22,6 +22,6 @@ var Body = React.createClass({
 });
 
 ReactDOM.render(
-  <Body url={url} />,
+  <Body url={url} socials={{}} />,
   document.getElementById('wrapper')
 );

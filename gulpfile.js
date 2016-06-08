@@ -30,4 +30,4 @@ gulp.task("webpack-dev-server", function(callback) {
   });
 });
 gulp.task('default', ['template', 'webpack'])
-gulp.watch(['src/*/*.jsx','*.html','*.jsx','src/sytles/*.scss'], ['default']);
+gulp.watch(['src/*/*.jsx','*.html','*.jsx','src/sytles/*.scss', 'src/static/*'], ['default']);
