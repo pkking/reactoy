@@ -171,3 +171,31 @@ h3 {
         bottom: 0;
     }
 }
+
+li.Socalink {  
+    list-style-type: none;
+    //display: inline;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+header.sidebar{
+    text-align: center;
+}
+
+i.fa{
+    font-size: 2em;
+    line-height: 2em;
+}
+
+ul.Socal {
+    padding: 0;
+    a {
+        width: 2em;
+        height: 2em;
+    }
+}
+
+div.sidebarContainer {
+    padding: 2em 1em;
+}
