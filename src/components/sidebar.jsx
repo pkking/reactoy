@@ -1,6 +1,7 @@
 import React  from 'react';
 import {Logo} from './logo';
 import {Social} from './Social';
+import {Link} from 'react-router';
 
 export var Sidebar = React.createClass({
 	render: function () {
@@ -12,6 +13,7 @@ export var Sidebar = React.createClass({
 						<a href="/">{this.props.title}</a>
 					</h1>
 					<Social links={this.props.socials}/>
+					<Link to='/about'>about</Link>
 				</div>
 			</header>
 		);

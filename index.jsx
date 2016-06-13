@@ -9,24 +9,20 @@ import { About } from './src/components/about.jsx';
 //sytles
 require('./src/sytles/blog.scss');
 var url = require('./src/static/profile.png');
+var links_url = require('./src/static/links.json');
+var posts_url = require('./src/static/posts.json');
 
 var Body = React.createClass({
   render: function () {
-    var socials = [{name:'weibo',url:'http://weibo.com/lcrrrr/'},{name:'github',url:'https://github.com/pkking'}];
     return (
       <div className="pure-g">
-        <Sidebar url={url} socials={socials} />
-        <Content posts={[{title:"first post",content:"hello world"},{title:"second post", content:"hello second"}]}/>
+        <Sidebar url={url} socials={links_url}  />
+        {this.props.children ||<Content posts={posts_url}/>}
       </div>
     );
   }
 });
-/*
-ReactDOM.render(
-  <Body url={url} socials={[{name:'weibo',url:'http://weibo.com/lcrrrr/'},{name:'github',url:'https://github.com/pkking'}]} />,
-  document.getElementById('wrapper')
-);
-*/
+
 ReactDOM.render((
   <Router history={browserHistory}>
     <Route path="/" component={Body}>
