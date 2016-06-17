@@ -4,7 +4,7 @@ import {Posts} from './posts.jsx';
 
 export var Content = React.createClass({
 	getInitialState: function () {
-		
+
 	},
 	render: function () {
 		return (

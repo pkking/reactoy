@@ -28,7 +28,7 @@ module.exports = {
         loaders: ["style", "css", "sass"]
       },
       { test: /\.(jpe?g|png|gif|svg)$/i, loaders: ['url?limit=10000', 'img?minimize'] },
-      { test: /\.json$/, loader: "file?name=[hash].[ext]"},
+      { test: /\.json$/, loader: "file?name=[hash].[ext]" },
     ]
   },
   sassLoader: {

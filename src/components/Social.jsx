@@ -3,9 +3,9 @@ import React from 'react';
 export var Social = React.createClass({
 	render: function () {
 		var list = [];
-		for(var i = 0; i < this.props.links.length; i++){
-			var i_name ='';
-			switch(this.props.links[i].name){
+		for (var i = 0; i < this.props.links.length; i++) {
+			var i_name = '';
+			switch (this.props.links[i].name) {
 				case 'weibo':
 					i_name = 'fa fa-weibo';
 					break;
