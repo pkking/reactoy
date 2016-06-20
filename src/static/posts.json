@@ -1,10 +1,14 @@
-[
-    {
-        "title":"first post",
-        "content":"hello world"
-    },
-    {
-        "title":"second post", 
-        "content":"hello second"
-    }
-]
+{
+    "posts":[
+        {
+            "title":"first post",
+            "content":"hello world",
+            "key":1341234
+        },
+        {
+            "title":"second post", 
+            "content":"hello second",
+            "key":22135
+        }
+    ]
+}

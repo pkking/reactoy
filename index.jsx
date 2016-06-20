@@ -16,7 +16,7 @@ var Body = React.createClass({
   render: function () {
     return (
       <div className="pure-g">
-        <Sidebar url={url} socials={links_url}  />
+        <Sidebar logo={url} socials={links_url}  />
         {this.props.children ||<Content posts={posts_url}/>}
       </div>
     );
