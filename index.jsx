@@ -1,13 +1,13 @@
 import React  from 'react';
 import ReactDOM  from 'react-dom';
-import { Router, Route, Link, browserHistory } from 'react-router';
+import { Router, Route, browserHistory } from 'react-router';
 // components
 import { Sidebar } from './src/components/sidebar.jsx';
 import { Content } from './src/components/content.jsx';
 import { About } from './src/components/about.jsx';
 
 //sytles
-require('./src/sytles/blog.scss');
+require('./dist/assets/blog.css');
 var url = require('./src/static/profile.png');
 var links_url = require('./src/static/links.json');
 var posts_url = require('./src/static/posts.json');

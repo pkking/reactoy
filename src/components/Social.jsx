@@ -27,7 +27,7 @@ export var Social = React.createClass({
 			list.push("");
 		}
 		return (
-			<ul className="Socal">
+			<ul className="Socials">
 				{list}
 			</ul>
 		);

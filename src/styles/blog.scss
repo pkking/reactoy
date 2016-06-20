@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(61, 146, 201);
+}
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+h3 {
+    font-weight: 100;
+}
+.header {
+    top: auto;
+    margin: 3em auto;
+}
+
+.sidebar {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background: rgb(61, 79, 93);
+    color: #fff;
+    .sidebarContainer {
+        padding: 2em 1em;
+        .logo-side {
+            border-radius: 50%;
+            max-width: 50%;
+            height: auto;
+        }
+        .about {
+            margin-top: 2em;
+            a {
+                color:white;
+            }
+        }
+        .Socials {
+            padding: 0;       
+            li {
+                display: inline;
+                .Socalink {  
+                    list-style-type: none;
+                    //display: inline;
+                    padding-top: 1em;
+                    padding-bottom: 1em;
+                }
+                a {
+                    i.fa{
+                        font-size: 2em;
+                        line-height: 2em;
+                    }
+                    display: inline-block;
+                    width: 2em;
+                    height: 2em;
+                    line-height: 2em;
+                    text-align: center;
+                    border-radius: 100%;
+                }
+            }
+        }
+    }
+}
+
+.content {
+    margin-left: 25%;
+    padding: 0 0 1em 0;
+    .posts {
+        padding-left: 0; 
+    }
+}
+
+.footer {
+    border-top: 1px solid #c0c0c0;
+    text-align: center;
+    padding: 1em 0;
+    a {
+        color: #ccc;
+        font-size: 80%;
+    }
+    .pure-menu a:hover,.pure-menu a:focus {
+        background: none;
+    }
+}

@@ -14,7 +14,7 @@ export var Posts = React.createClass({
 			}
 		}
 		return (
-			<div class='posts'>
+			<div className='posts'>
 				{list}
 			</div>
 		);

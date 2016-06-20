@@ -3,6 +3,7 @@ var webpackgulp = require('webpack-stream');
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');
 var gutil = require("gulp-util");
+var sass = require('gulp-sass');
 var devServerConfig = require('./webpack-dev-server.config.js');
 
 gulp.task('webpack', function () {
@@ -11,9 +12,19 @@ gulp.task('webpack', function () {
     .pipe(gulp.dest('dist/assets'));
 });
 
+gulp.task('sass', function () {
+  return gulp.src('./src/styles/*.scss')
+    .pipe(sass.sync().on('error', sass.logError))
+    .pipe(gulp.dest('./dist/assets'));
+});
+
 gulp.task('template', function () {
-  return gulp.src('*.html')
-    .pipe(gulp.dest('dist/'));
+  return gulp.src('index.html')
+    .pipe(gulp.dest('./dist'));
+});
+
+gulp.task('sass:watch', function () {
+  gulp.watch('./src/**/*.scss', ['sass']);
 });
 
 gulp.task("webpack-dev-server", function (callback) {
@@ -29,5 +40,6 @@ gulp.task("webpack-dev-server", function (callback) {
     callback();
   });
 });
-gulp.task('default', ['template', 'webpack'])
-gulp.watch(['src/*/*.jsx', '*.html', '*.jsx', 'src/sytles/*.scss', 'src/static/*'], ['default']);
+
+gulp.task('default', ['sass', 'template', 'webpack'])
+gulp.watch(['./src/**/*.jsx', '*.html', '*.jsx', './src/**/*.scss', './src/static/*'], ['default']);
