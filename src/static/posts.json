@@ -3,12 +3,14 @@
         {
             "title":"first post",
             "content":"hello world",
-            "key":1341234
+            "key":1341234,
+            "pubTime":"Tue Jun 21 2016"
         },
         {
             "title":"second post", 
             "content":"hello second",
-            "key":22135
+            "key":22135,
+            "tags":["linux", "reactjs"]
         }
     ]
 }

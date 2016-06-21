@@ -1,5 +1,4 @@
 import React  from 'react';
-import {Footer} from './footer.jsx';
 import {Posts} from './posts.jsx';
 
 export var Content = React.createClass({
@@ -11,12 +10,10 @@ export var Content = React.createClass({
 			.then(data => this.setState(data));
 	},
 	render: function () {
-		const posts = this.state.posts ? this.state.posts : [];
-		return (
-			<content className="content pure-u-1-1 pure-u-md-3-4">
-				<Posts posts={posts}/>
-				<Footer />
-			</content>
+		//const posts = this.state.posts ? this.state.posts : [];
+		console.log(this.state.posts);
+		return (			
+			<Posts posts={this.state.posts}/>
 		);
 	},
 });

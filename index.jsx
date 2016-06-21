@@ -6,6 +6,7 @@ import { Sidebar } from './src/components/sidebar.jsx';
 import { Content } from './src/components/content.jsx';
 import { About } from './src/components/about.jsx';
 import { Post } from './src/components/post.jsx';
+import {Footer} from './src/components/footer.jsx';
 
 //sytles
 require('./dist/assets/blog.css');
@@ -18,7 +19,10 @@ var Body = React.createClass({
     return (
       <div className="pure-g">
         <Sidebar logo={url} socials={links_url}  />
-        {this.props.children ||<Content posts={posts_url}/>}
+        <content className="content pure-u-1-1 pure-u-md-3-4">
+          {this.props.children ||<Content posts={posts_url}/>}
+          <Footer />
+        </content>
       </div>
     );
   }

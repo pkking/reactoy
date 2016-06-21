@@ -1,7 +1,12 @@
 $white: #fff;
-$dark-gray: rgb(61, 79, 93);
+$dark-gray: #333;
 $blue: rgb(61, 146, 201);
 $light-gray: #c0c0c0;
+$post-margin: 0 8% 2%;
+$yellow: #999;
+$orange: #ff8c00;
+$tag-font-size: .82em;
+$footer-font-size: .80em;
 
 * {
     box-sizing: border-box;
@@ -16,9 +21,6 @@ a:focus {
     text-decoration: none;
 }
 
-h3 {
-    font-weight: 100;
-}
 .header {
     top: auto;
     margin: 3em auto;
@@ -71,11 +73,21 @@ h3 {
     }
 }
 
-.content {
+content.content {
     margin-left: 25%;
     padding: 0 0 1em 0;
     .posts {
-        padding-left: 0; 
+        margin: $post-margin; 
+    }
+    .postDetail {
+        margin: $post-margin; 
+    }
+    .tagHeader {
+        color: $yellow;
+        font-size: $tag-font-size;
+        a {
+            color: $orange;
+        }
     }
 }
 
@@ -83,6 +95,8 @@ h3 {
     border-top: 1px solid $light-gray;
     text-align: center;
     padding: 1em 0;
+    font-size: $footer-font-size;
+
     a {
         color: $white;
         font-size: 80%;
