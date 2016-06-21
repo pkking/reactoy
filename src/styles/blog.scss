@@ -1,10 +1,15 @@
+$white: #fff;
+$dark-gray: rgb(61, 79, 93);
+$blue: rgb(61, 146, 201);
+$light-gray: #c0c0c0;
+
 * {
     box-sizing: border-box;
 }
 
 a {
     text-decoration: none;
-    color: rgb(61, 146, 201);
+    color: $blue;
 }
 a:hover,
 a:focus {
@@ -24,8 +29,8 @@ h3 {
     position: fixed;
     top: 0;
     bottom: 0;
-    background: rgb(61, 79, 93);
-    color: #fff;
+    background: $dark-gray;
+    color: $white;
     .sidebarContainer {
         padding: 2em 1em;
         .logo-side {
@@ -36,7 +41,7 @@ h3 {
         .about {
             margin-top: 2em;
             a {
-                color:white;
+                color:$white;
             }
         }
         .Socials {
@@ -75,11 +80,11 @@ h3 {
 }
 
 .footer {
-    border-top: 1px solid #c0c0c0;
+    border-top: 1px solid $light-gray;
     text-align: center;
     padding: 1em 0;
     a {
-        color: #ccc;
+        color: $white;
         font-size: 80%;
     }
     .pure-menu a:hover,.pure-menu a:focus {

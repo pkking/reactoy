@@ -5,6 +5,7 @@ import { Router, Route, browserHistory } from 'react-router';
 import { Sidebar } from './src/components/sidebar.jsx';
 import { Content } from './src/components/content.jsx';
 import { About } from './src/components/about.jsx';
+import { Post } from './src/components/post.jsx';
 
 //sytles
 require('./dist/assets/blog.css');
@@ -27,6 +28,7 @@ ReactDOM.render((
   <Router history={browserHistory}>
     <Route path="/" component={Body}>
       <Route path="about" component={About}/>
+      <Route path="/post/:id" component={Post}/>
       <Route path="*" component={Body}/>
     </Route>
   </Router>
