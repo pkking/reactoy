@@ -11,7 +11,7 @@ export var Content = React.createClass({
 	},
 	render: function () {
 		//const posts = this.state.posts ? this.state.posts : [];
-		console.log(this.state.posts);
+		//console.log(this.state.posts);
 		return (			
 			<Posts posts={this.state.posts}/>
 		);

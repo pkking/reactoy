@@ -6,7 +6,9 @@ import { Sidebar } from './src/components/sidebar.jsx';
 import { Content } from './src/components/content.jsx';
 import { About } from './src/components/about.jsx';
 import { Post } from './src/components/post.jsx';
-import {Footer} from './src/components/footer.jsx';
+import { Footer } from './src/components/footer.jsx';
+import { Tags, Tag } from './src/components/tags.jsx';
+import { Nav} from './src/components/nav.jsx';
 
 //sytles
 require('./dist/assets/blog.css');
@@ -14,13 +16,22 @@ var url = require('./src/static/profile.png');
 var links_url = require('./src/static/links.json');
 var posts_url = require('./src/static/posts.json');
 
+var noMatch = React.createClass({
+  render: function () {
+    return (
+      <p> no router matched </p>
+    );
+  }
+});
+
 var Body = React.createClass({
   render: function () {
     return (
       <div className="pure-g">
-        <Sidebar logo={url} socials={links_url}  />
+        <Sidebar logo={url} socials={links_url} />
         <content className="content pure-u-1-1 pure-u-md-3-4">
-          {this.props.children ||<Content posts={posts_url}/>}
+          <Nav/>
+          {this.props.children || <Content posts={posts_url}/>}
           <Footer />
         </content>
       </div>
@@ -33,7 +44,10 @@ ReactDOM.render((
     <Route path="/" component={Body}>
       <Route path="about" component={About}/>
       <Route path="/post/:id" component={Post}/>
-      <Route path="*" component={Body}/>
+      <Route path="/tags" component={Tags}>
+        <Route path="/tag/:tag" component={Tag}/>
+      </Route>
+      <Route path="*" component={noMatch}/>
     </Route>
   </Router>
 ), document.getElementById('wrapper'));
