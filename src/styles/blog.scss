@@ -3,7 +3,7 @@ $dark-gray: #333;
 $blue: rgb(61, 146, 201);
 $light-gray: #c0c0c0;
 $post-margin: 0 8% 2%;
-$yellow: #999;
+$gray: #999;
 $orange: #ff8c00;
 $tag-font-size: .82em;
 $footer-font-size: .80em;
@@ -50,6 +50,7 @@ a:focus {
             padding: 0;       
             li {
                 display: inline;
+                margin: 0 .5em 0 .5em;
                 .Socalink {  
                     list-style-type: none;
                     //display: inline;
@@ -62,10 +63,6 @@ a:focus {
                         line-height: 2em;
                     }
                     display: inline-block;
-                    width: 2em;
-                    height: 2em;
-                    line-height: 2em;
-                    text-align: center;
                     border-radius: 100%;
                 }
             }
@@ -76,6 +73,19 @@ a:focus {
 content.content {
     margin-left: 25%;
     padding: 0 0 1em 0;
+
+    .nav {
+        background-color: black;
+        a {
+            color: $white;
+            background-color: black;
+        }
+        a:hover,
+        a:focus {
+            color: $orange;
+            background-color: black;
+        }
+    }
     .posts {
         margin: $post-margin; 
     }
@@ -83,7 +93,7 @@ content.content {
         margin: $post-margin; 
     }
     .tagHeader {
-        color: $yellow;
+        color: $gray;
         font-size: $tag-font-size;
         a {
             color: $orange;
