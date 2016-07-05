@@ -2,7 +2,7 @@ $white: #fff;
 $dark-gray: #333;
 $blue: rgb(61, 146, 201);
 $light-gray: #c0c0c0;
-$post-margin: 0 8% 2%;
+$post-margin: 0 5% 2%;
 $gray: #999;
 $orange: #ff8c00;
 $tag-font-size: .82em;
@@ -106,9 +106,9 @@ content.content {
     text-align: center;
     padding: 1em 0;
     font-size: $footer-font-size;
-
+    color: $gray;
     a {
-        color: $white;
+        color: $orange;
         font-size: 80%;
     }
     .pure-menu a:hover,.pure-menu a:focus {

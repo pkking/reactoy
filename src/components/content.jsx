@@ -13,7 +13,7 @@ export var Content = React.createClass({
 		//const posts = this.state.posts ? this.state.posts : [];
 		//console.log(this.state.posts);
 		return (			
-			<Posts posts={this.state.posts}/>
+			<Posts posts={this.state.posts} links={this.props.links} />
 		);
 	},
 });

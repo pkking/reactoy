@@ -4,12 +4,12 @@
         {
             "name":"weibo",
             "url":"http://weibo.com/lcrrrr/",
-            "key":1223
+            "key":1
         },
         {
             "name":"github",
             "url":"https://github.com/pkking",
-            "key":33455
+            "key":2
         }
     ]
 }

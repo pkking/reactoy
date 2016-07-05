@@ -3,6 +3,11 @@ import { Link } from 'react-router';
 
 export var Nav = React.createClass({
     render: function () {
+        var list = [];
+        for(var i = 0; i < this.props.links.length; i++){
+            list.push(<li key={this.props.links[i].key} className="pure-menu-item">
+                    <Link to={this.props.links[i].url} className="pure-menu-link">{this.props.links[i].name}</Link></li>);
+        }
         return (
             <div className="nav pure-menu pure-menu-horizontal">
                 <ul className="pure-menu-list">
@@ -11,9 +16,7 @@ export var Nav = React.createClass({
                     <li className="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
                         <Link to="/" id="menuLink1" className="pure-menu-link">社交</Link>
                         <ul className="pure-menu-children">
-                            <li className="pure-menu-item"><Link href="#" className="pure-menu-link">Email</Link></li>
-                            <li className="pure-menu-item"><Link href="#" className="pure-menu-link">Twitter</Link></li>
-                            <li className="pure-menu-item"><Link href="#" className="pure-menu-link">Tumblr Blog</Link></li>
+                            {list}
                         </ul>
                     </li>
                 </ul>

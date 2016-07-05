@@ -25,13 +25,23 @@ var noMatch = React.createClass({
 });
 
 var Body = React.createClass({
+  getInitialState: function () {
+		return {
+					title:"",
+					links:[],
+				};
+	},
+	componentDidMount: function(){
+		fetch(links_url).then(response => response.json())
+			.then(data => this.setState(data));
+	},
   render: function () {
     return (
       <div className="pure-g">
-        <Sidebar logo={url} socials={links_url} />
+        <Sidebar logo={url} links={this.state.links} title={this.state.title} />
         <content className="content pure-u-1-1 pure-u-md-3-4">
-          <Nav/>
-          {this.props.children || <Content posts={posts_url}/>}
+          <Nav  links={this.state.links}/>
+          {this.props.children || <Content posts={posts_url} />}
           <Footer />
         </content>
       </div>
