@@ -12,12 +12,6 @@ gulp.task('webpack', function () {
     .pipe(webpackgulp(require('./webpack.config.js')))
     .pipe(gulp.dest('dist/assets'));
 });
-/*
-gulp.task('clean', function () {
-  return del([
-    'dist/*',
-  ]);
-})*/
 
 gulp.task('sass', function () {
   return gulp.src('./src/styles/*.scss')
@@ -48,5 +42,5 @@ gulp.task("webpack-dev-server", function (callback) {
   });
 });
 
-gulp.task('default', [ 'sass', 'template', 'webpack'])
+gulp.task('default', ['sass', 'template', 'webpack'])
 gulp.watch(['./src/**/*.jsx', '*.html', '*.jsx', './src/**/*.scss', './src/static/*'], ['default']);

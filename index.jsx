@@ -11,7 +11,11 @@ import { Tags, Tag } from './src/components/tags.jsx';
 import { Nav} from './src/components/nav.jsx';
 
 //sytles
+require('./bower_components/pure/pure-min.css');
+require('./bower_components/pure/grids-responsive-min.css');
+require('./bower_components/font-awesome/css/font-awesome.min.css');
 require('./dist/assets/blog.css');
+
 var url = require('./src/static/profile.png');
 var links_url = require('./src/static/links.json');
 var posts_url = require('./src/static/posts.json');
